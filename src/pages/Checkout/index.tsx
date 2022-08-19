@@ -1,5 +1,6 @@
 import {
   BaseInput,
+  CartSummary,
   CheckoutContainer,
   DeliveryForm,
   FormLabel,
@@ -8,8 +9,10 @@ import {
   PaymentMethodButton,
   SelectedCoffees,
   SmallInput,
+  SubmitOrderButton,
 } from "./styles";
 import { CurrencyDollar, MapPinLine, CreditCard, Bank, Money } from "phosphor-react";
+import { SelectedCoffee } from "../../components/SelectedCoffee";
 
 export function Checkout() {
   return (
@@ -64,7 +67,25 @@ export function Checkout() {
       </section>
       <section>
         <h2>Cafés selecionados</h2>
-        <SelectedCoffees />
+        <SelectedCoffees>
+          <SelectedCoffee />
+          <SelectedCoffee />
+          <CartSummary>
+            <div>
+              <p>Total de itens</p>
+              <span>R$ 29,70</span>
+            </div>
+            <div>
+            <p>Entrega</p>
+              <span>R$ 3,50</span>
+            </div>
+            <div>
+              <p>Total</p>
+              <span>R$ 33,20</span>
+            </div>
+          </CartSummary>
+          <SubmitOrderButton>CONFIRMAR PEDIDO</SubmitOrderButton>
+        </SelectedCoffees>
       </section>
     </CheckoutContainer>
   );

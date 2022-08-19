@@ -5,6 +5,10 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
+
+  img {
+    cursor: pointer;
+  }
 `;
 
 export const UserInfo = styled.div`
@@ -17,6 +21,12 @@ export const UserInfo = styled.div`
     border-radius: 6px;
     color: ${props => props.theme["yellow-dark"]};
     padding: 6px 8px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.05)
+    }
 
   }
 `;

@@ -77,21 +77,26 @@ export const CardFeatures = styled.div`
     span {
       color: ${(props) => props.theme["purple"]};
       font-size: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        color: ${(props) => props.theme["purple-dark"]};
+      }
     }
   }
 `;
 
 export const AddToCartButton = styled.button`
   border: 0;
-  background-color: ${props => props.theme["purple-dark"]};
+  background-color: ${(props) => props.theme["purple-dark"]};
   padding: 0.5rem;
   border-radius: 6px;
-  color: ${props => props.theme.white};
+  color: ${(props) => props.theme.white};
   display: flex;
   align-items: center;
   cursor: pointer;
 
   &:hover {
-    background-color: ${props => props.theme.purple}
+    background-color: ${(props) => props.theme.purple};
   }
-`
+`;
