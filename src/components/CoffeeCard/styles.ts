@@ -72,6 +72,7 @@ export const CardFeatures = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-right: -1rem;
 
     span {
       color: ${(props) => props.theme["purple"]};

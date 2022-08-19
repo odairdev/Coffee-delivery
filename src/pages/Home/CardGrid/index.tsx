@@ -6,6 +6,10 @@ export function CardGrid() {
   return (
     <GridContainer>
       <CoffeeCard />
+      <CoffeeCard />
+      <CoffeeCard />
+      <CoffeeCard />
+      <CoffeeCard />
     </GridContainer>
   )
 }
