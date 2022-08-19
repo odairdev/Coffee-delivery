@@ -5,7 +5,7 @@ export const HeroContainer = styled.section`
   align-items: flex-start;
   justify-content: space-between;
   margin: 5.75rem 0;
-
+  margin-bottom: 3rem;
 `
 
 export const HeroText = styled.div`

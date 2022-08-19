@@ -13,7 +13,7 @@ export function Header() {
           Porto Alegre, RS
         </UserLocation>
         <div className="cart">
-        <ShoppingCart size={24} weight="fill" />
+          <ShoppingCart size={24} weight="fill" />
         </div>
       </UserInfo>
     </HeaderContainer>
