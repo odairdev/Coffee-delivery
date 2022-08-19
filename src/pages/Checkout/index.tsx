@@ -4,10 +4,12 @@ import {
   DeliveryForm,
   FormLabel,
   FullInput,
+  PaymentForm,
+  PaymentMethodButton,
   SelectedCoffees,
   SmallInput,
 } from "./styles";
-import { MapPin, MapPinLine } from "phosphor-react";
+import { CurrencyDollar, MapPinLine, CreditCard, Bank, Money } from "phosphor-react";
 
 export function Checkout() {
   return (
@@ -30,11 +32,34 @@ export function Checkout() {
               <FullInput placeholder="Complemento" />
             </div>
             <div>
-            <BaseInput placeholder="Bairro" />
-            <FullInput placeholder="Cidade" />
-            <SmallInput placeholder="UF" />
+              <BaseInput placeholder="Bairro" />
+              <FullInput placeholder="Cidade" />
+              <SmallInput placeholder="UF" />
             </div>
           </DeliveryForm>
+          <PaymentForm>
+            <FormLabel>
+              <div>
+                <CurrencyDollar size={22} />
+                <h3>Pagamento</h3>
+              </div>
+              <span>O pagamento é feito na entrega. Escolha a forma que deseja pagar</span>
+            </FormLabel>
+            <div>
+              <PaymentMethodButton selected={true}>
+                <CreditCard size={22} />
+                Cartão de Credito
+              </PaymentMethodButton>
+              <PaymentMethodButton>
+                <Bank size={22} />
+                Cartão de Débito
+              </PaymentMethodButton>
+              <PaymentMethodButton>
+                <Money size={22} />
+                Dinheiro
+              </PaymentMethodButton>
+            </div>
+          </PaymentForm>
         </div>
       </section>
       <section>

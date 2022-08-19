@@ -9,7 +9,7 @@ export const CheckoutContainer = styled.div`
   section h2 {
     font-family: "baloo 2", cursive;
     color: ${(props) => props.theme["base-subtitle"]};
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 15px;
   }
@@ -17,6 +17,7 @@ export const CheckoutContainer = styled.div`
 const baseForm = styled.form`
   background-color: ${(props) => props.theme["base-card"]};
   padding: 2.5rem;
+  border-radius: 6px;
 `;
 
 export const FormLabel = styled.label`
@@ -47,7 +48,6 @@ export const FormLabel = styled.label`
 
 export const DeliveryForm = styled(baseForm)`
   width: 40rem;
-  border-radius: 6px;
 
   div {
     display: flex;
@@ -55,6 +55,16 @@ export const DeliveryForm = styled(baseForm)`
     gap: 0.75rem;
   }
 `;
+
+export const PaymentForm = styled(baseForm)`
+  margin: 1rem 0;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+`
 
 export const BaseInput = styled.input`
   display: block;
@@ -75,6 +85,34 @@ export const FullInput = styled(BaseInput)`
 
 export const SmallInput = styled(BaseInput)`
   max-width: 60px;
+`
+
+interface PaymentMethodButtonProps {
+  selected?: boolean;
+}
+
+export const PaymentMethodButton = styled.button<PaymentMethodButtonProps>`
+  border: 0;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: ${props => props.selected ? props.theme["purple-light"] : props.theme["base-button"]};
+  border: ${props => props.selected ? `1px solid ${props.theme["purple-dark"]}` : 0};
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: ${props => props.theme["base-hover"]}
+  }
+
+  svg {
+    color: ${props => props.theme.purple}
+  }
 `
 
 export const SelectedCoffees = styled.div`
