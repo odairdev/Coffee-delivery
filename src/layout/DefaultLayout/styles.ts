@@ -4,7 +4,7 @@ export const LayoutContainer = styled.div`
   max-width: 70rem;
   margin: 0 auto;
 
-  @media (max-width: 860px) {
+  @media (max-width: 960px) {
     padding: 0 0.5rem;
   }
 `;
